@@ -7,6 +7,10 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'GR Turismo Aventura',
   description: 'Cabalgatas en la cordillera de los Andes',
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({

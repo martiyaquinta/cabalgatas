@@ -103,14 +103,15 @@ function CabalgataCard({ cabalgata }: { cabalgata: CabalgataProps }) {
   return (
     <div className={styles.cabalgataCard}>
       <div className={styles.cardImage}>
-        <img 
-          src={cabalgata.image} 
+        <img
+          src={cabalgata.image}
           alt={t(cabalgata.titleKey)}
         />
-        {/* Badge de dificultad */}
-        <div className={styles.difficultyBadge}>
-          {t(`cabalgatas.difficulty.${cabalgata.difficulty.toLowerCase()}` as any)}
-        </div>
+        {cabalgata.id !== 'cabalgata-3-valles' && (
+          <div className={styles.difficultyBadge}>
+            {t(`cabalgatas.difficulty.${cabalgata.difficulty.toLowerCase()}` as any)}
+          </div>
+        )}
       </div>
       
       <div className={styles.cardContent}>
