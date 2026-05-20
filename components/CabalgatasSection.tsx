@@ -69,7 +69,7 @@ const cabalgatasData: CabalgataProps[] = [
     titleKey: 'cabalgatas.tours.expertos.title',
     descriptionKey: 'cabalgatas.tours.expertos.description',
     durationKey: 'cabalgatas.tours.expertos.duration',
-    priceKey: 'cabalgatas.priceConsult',
+    priceKey: 'cabalgatas.tours.expertos.price',
     difficulty: 'Avanzado',
     image: '/expertosinicio.png',
     pdfUrl: '/pdfs/cabalgataexpertos.html',
