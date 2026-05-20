@@ -71,7 +71,7 @@ const cabalgatasData: CabalgataProps[] = [
     durationKey: 'cabalgatas.tours.expertos.duration',
     priceKey: 'cabalgatas.tours.expertos.price',
     difficulty: 'Avanzado',
-    image: '/expertosinicio.png',
+    image: '/expertos.jpg',
     pdfUrl: '/pdfs/cabalgataexpertos.html',
     available: true,
   },
@@ -106,6 +106,7 @@ function CabalgataCard({ cabalgata }: { cabalgata: CabalgataProps }) {
         <img
           src={cabalgata.image}
           alt={t(cabalgata.titleKey)}
+          style={cabalgata.id === 'cabalgata-expertos' ? { objectPosition: 'center 85%' } : undefined}
         />
         {cabalgata.id !== 'cabalgata-3-valles' && (
           <div className={styles.difficultyBadge}>
