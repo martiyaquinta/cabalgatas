@@ -58,7 +58,7 @@ const cabalgatasData: CabalgataProps[] = [
     titleKey: 'cabalgatas.tours.tres-valles.title',
     descriptionKey: 'cabalgatas.tours.tres-valles.description',
     durationKey: 'cabalgatas.tours.tres-valles.duration',
-    priceKey: 'cabalgatas.priceConsult',
+    priceKey: 'cabalgatas.tours.tres-valles.price',
     difficulty: 'Principiante',
     image: '/cabalgata3valles.jpg',
     pdfUrl: '/pdfs/cabalgata3valles.html',
