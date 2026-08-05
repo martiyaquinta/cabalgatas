@@ -11,7 +11,7 @@ const imagesToTest = [
   { name: 'Avión', path: '/avion.png' },
   { name: 'Los Molles', path: '/cabalgataLosMolles.jpg' },
   { name: '3 Valles', path: '/cabalgata3valles.jpg' },
-  { name: 'Expertos', path: '/expertosinicio.png' },
+  { name: 'Ruta del Cóndor', path: '/expertosinicio.png' },
   { name: 'Semana Santa', path: '/cabalgatasemanasanta.png' },
   { name: 'Transfer', path: '/transfer.jpeg' },
   { name: 'Galería', path: '/galeria.jpg' },
