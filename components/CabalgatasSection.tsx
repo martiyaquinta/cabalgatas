@@ -36,7 +36,7 @@ const cabalgatasData: CabalgataProps[] = [
     titleKey: 'cabalgatas.tours.avion-uruguayos.title',
     descriptionKey: 'cabalgatas.tours.avion-uruguayos.description',
     durationKey: 'cabalgatas.tours.avion-uruguayos.duration',
-    priceKey: 'cabalgatas.priceConsult',
+    priceKey: 'cabalgatas.tours.avion-uruguayos.price',
     difficulty: 'Intermedio',
     image: '/avion.png',
     pdfUrl: '/pdfs/cabalgata-avion-uruguayos.html',
