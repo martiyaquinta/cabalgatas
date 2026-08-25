@@ -88,9 +88,10 @@
   - En Cruce de los Andes y Ruta del Cóndor: sección "¿Cómo vuelvo?" con combi de regreso
 
 ### Actualización Transfer — Avión de los Uruguayos (ES / EN / PT)
-- Texto de transfer privado desde Mendoza/San Rafael hasta Los Molles
-- Opción de colectivos hasta Parada Río Salado + transfer coordinado por $30.000
-- Aviso: domingos no hay servicios directos de colectivos
+- Sección "Cómo llegar" reemplazada por completo: solo título + texto de transfer
+- Eliminado texto de vehículo propio y subtítulo Bus/Avión
+- Transfer privado Mendoza/San Rafael → Los Molles
+- Colectivos a Parada Río Salado + transfer $30.000 (sin servicio directo los domingos)
 
 ---
 
