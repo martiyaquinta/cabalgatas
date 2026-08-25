@@ -47,7 +47,7 @@ const cabalgatasData: CabalgataProps[] = [
     titleKey: 'cabalgatas.tours.los-molles.title',
     descriptionKey: 'cabalgatas.tours.los-molles.description',
     durationKey: 'cabalgatas.tours.los-molles.duration',
-    priceKey: 'cabalgatas.priceConsult',
+    priceKey: 'cabalgatas.tours.los-molles.price',
     difficulty: 'Principiante',
     image: '/cabalgataLosMolles.jpg',
     pdfUrl: '/pdfs/cabalgataLosMolles.html',
