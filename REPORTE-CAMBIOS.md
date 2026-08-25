@@ -3,6 +3,15 @@
 
 ---
 
+## Fechas y precio Los Molles — 2026-08-25
+
+- Reemplazo de "Próximamente" / "Coming soon" / "Em breve" por fechas disponibles
+- Meses: Diciembre, Enero y Febrero (fechas de fin de semana)
+- **Valor preventa: $440.000 por persona** (ES / EN / PT)
+- Precio visible en PDFs y en la card del sitio web
+
+---
+
 ## Actualización de precios — 2026-08-25
 
 - **Cruce de los Andes**: $1.680.000 → **$1.860.000** (ES / EN / PT)
