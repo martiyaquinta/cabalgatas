@@ -3,6 +3,14 @@
 
 ---
 
+## Actualización de precios — 2026-08-25
+
+- **Cruce de los Andes**: $1.680.000 → **$1.860.000** (ES / EN / PT)
+- **Ruta del Cóndor**: $1.860.000 → **$2.060.000** (ES / EN / PT)
+- Archivos actualizados: locales (JSON), PDFs públicos y templates PDF
+
+---
+
 ## 1. SITIO WEB COMPLETO
 
 - Desarrollo del sitio web desde cero con Next.js + TypeScript + Tailwind CSS
@@ -62,9 +70,9 @@
 - Eliminación de Mercado Pago como opción
 - Eliminación de descuento estudiantes
 - Precios mostrados como "CONSULTAR" donde aplica
-- Precio Cruce de los Andes: $680.000
+- Precio Cruce de los Andes: $1.860.000
 - Precio 3 Valles: USD 800
-- Precio preventa en tarjeta de Ruta del Cóndor
+- Precio preventa Ruta del Cóndor: $2.060.000
 
 ---
 
