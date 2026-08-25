@@ -93,6 +93,11 @@
 - Transfer privado Mendoza/San Rafael → Los Molles
 - Colectivos a Parada Río Salado + transfer $30.000 (sin servicio directo los domingos)
 
+### Actualización Cómo llegar — 3 Valles (ES / EN / PT)
+- Sección "Cómo llegar" actualizada: se elimina texto de vehículo propio
+- Nuevo texto: viajar un día antes a San Rafael con transporte incluido a Los Molles (ida y vuelta)
+- Si se viaja a Mendoza capital: consultar precios y disponibilidad de transporte
+
 ---
 
 ## 7. RENOMBRADO DE CABALGATA
