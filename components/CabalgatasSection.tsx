@@ -80,7 +80,7 @@ const cabalgatasData: CabalgataProps[] = [
     titleKey: 'cabalgatas.tours.semana-santa.title',
     descriptionKey: 'cabalgatas.tours.semana-santa.description',
     durationKey: 'cabalgatas.tours.semana-santa.duration',
-    priceKey: 'cabalgatas.priceConsult',
+    priceKey: 'cabalgatas.tours.semana-santa.price',
     difficulty: 'Principiante',
     image: '/cabalgatasemanasanta.png',
     pdfUrl: '/pdfs/cabalgatasemanaSanta.html',

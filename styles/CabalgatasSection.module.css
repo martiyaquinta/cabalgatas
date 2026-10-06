@@ -277,27 +277,36 @@
 }
 
 .itineraryItem::before {
-  content: "⏰";
+  content: "";
   position: absolute;
   left: 0;
-  top: 1rem;
-  font-size: 1.1rem;
+  top: 1.35rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: #0ea5e9;
 }
 
 .includesItem::before {
-  content: "✅";
+  content: "";
   position: absolute;
   left: 0;
-  top: 1rem;
-  font-size: 1.1rem;
+  top: 1.35rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: #0f8480;
 }
 
 .recommendationsItem::before {
-  content: "💡";
+  content: "";
   position: absolute;
   left: 0;
-  top: 1rem;
-  font-size: 1.1rem;
+  top: 1.35rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: #f59e0b;
 }
 
 .cardActions {
