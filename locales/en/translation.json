@@ -34,7 +34,7 @@
         "fullDescription": "A unique experience crossing the Andes Mountains following General San Martín's footsteps. We'll traverse unique landscapes with spectacular panoramic views.",
         "highlights": [
           "Historic mountain range crossing",
-          "Unique high mountain landscapes", 
+          "Unique high mountain landscapes",
           "Experience with expert guides",
           "Camping under the stars"
         ]
@@ -43,7 +43,7 @@
         "title": "URUGUAYAN PLANE HORSE RIDING",
         "description": "Expedition through the scenario of \"The Andes Tragedy\"",
         "duration": "5 DAYS 4 NIGHTS",
-        "price": "$1,480,000",
+        "price": "$1.480.000",
         "fullDescription": "Travel to the site where the famous 1972 plane crash occurred. A survival and reflection experience in the Andes.",
         "highlights": [
           "Visit to the historic crash site",
@@ -56,7 +56,7 @@
         "title": "LOS MOLLES HORSE RIDING",
         "description": "Experience the mountain in two unique days",
         "duration": "2 DAYS 1 NIGHT",
-        "price": "$440,000",
+        "price": "$440.000",
         "fullDescription": "A perfect getaway to discover the Mendoza Andes. Ideal for beginners seeking their first horseback riding experience.",
         "highlights": [
           "Perfect for beginners",
@@ -69,7 +69,7 @@
         "title": "3 VALLEYS HORSE RIDING",
         "description": "In this three-day experience you will be able to enjoy the magic of sunsets.",
         "duration": "3 DAYS 2 NIGHTS",
-        "price": "$1,180,000",
+        "price": "$1.180.000",
         "fullDescription": "Explore three unique valleys of the Mendoza Andes. An intermediate experience perfect for enjoying nature.",
         "highlights": [
           "Three unique valleys in one trip",
@@ -82,7 +82,7 @@
         "title": "CONDOR ROUTE",
         "description": "A challenging experience for experienced riders in mountainous terrain.",
         "duration": "7 DAYS 6 NIGHTS",
-        "price": "$2,060,000",
+        "price": "$2.060.000",
         "fullDescription": "The biggest challenge for experienced riders. Demanding terrain and unique high mountain landscapes.",
         "highlights": [
           "Only for experienced riders",
@@ -92,9 +92,10 @@
         ]
       },
       "semana-santa": {
-        "title": "EASTER WEEK HORSE RIDING",
+        "title": "EASTER WEEK HORSEBACK RIDE",
         "description": "Special Easter expedition with cultural activities and unique landscapes",
         "duration": "4 DAYS 3 NIGHTS",
+        "price": "$1.440.000",
         "fullDescription": "A special experience designed for Easter Week. Combines tradition, culture and the natural beauty of the Andes.",
         "highlights": [
           "Easter Week themed experience",

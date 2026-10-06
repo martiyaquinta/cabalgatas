@@ -1,337 +1,777 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="robots" content="noindex, nofollow">
-    <meta charset="UTF-8">
-    <title>Cavalgada de Semana Santa - GR Turismo Aventura</title>
-    <style>
+ <meta name="robots" content="noindex, nofollow">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+ <title>CABALGATA SEMANA SANTA - GR Turismo Aventura</title>
+ <style>
+
+ *, *::before, *::after { box-sizing: border-box; }
+
+ html {
+ -webkit-text-size-adjust: 100%;
+ text-size-adjust: 100%;
+ }
+
+ body {
+ font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+ margin: 0 auto;
+ padding: 12px;
+ max-width: 900px;
+ line-height: 1.45;
+ color: #333;
+ background: #fff;
+ overflow-x: hidden;
+ font-size: 16px;
+ }
+
+ .header {
+ text-align: center;
+ margin-bottom: 16px;
+ }
+
+ .logo {
+ width: min(100px, 28vw);
+ height: auto;
+ margin-bottom: 12px;
+ }
+
+ .title {
+ background: linear-gradient(135deg, #0f8480, #20a39e);
+ color: white;
+ padding: 14px 12px;
+ border-radius: 12px;
+ margin-bottom: 12px;
+ }
+
+ .title h1 {
+ margin: 0;
+ font-size: clamp(1.35rem, 5.5vw, 2.4rem);
+ line-height: 1.15;
+ text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+ word-break: break-word;
+ }
+
+ .title h2 {
+ margin: 8px 0 0 0;
+ font-size: clamp(0.95rem, 3.5vw, 1.2rem);
+ opacity: 0.95;
+ font-weight: 500;
+ }
+
+ .main-image {
+ width: 100%;
+ max-width: 600px;
+ height: clamp(160px, 42vw, 250px);
+ object-fit: cover;
+ border-radius: 12px;
+ box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+ margin: 12px auto 16px;
+ display: block;
+ }
+
+ .content-section {
+ margin: 16px 0;
+ padding: 14px;
+ background: #f9f9f9;
+ border-radius: 10px;
+ border-left: 5px solid #0f8480;
+ }
+
+ .content-section h3,
+ .what-to-bring h3,
+ .payment-info h3,
+ .contact-info h3 {
+ font-size: clamp(1.05rem, 4vw, 1.35rem);
+ line-height: 1.25;
+ margin: 0 0 12px 0;
+ }
+
+ .content-section h4 {
+ font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+ margin: 14px 0 8px;
+ }
+
+ .content-section p,
+ .what-to-bring p,
+ .payment-info p,
+ .contact-info p,
+ .day-item p {
+ margin: 0 0 10px 0;
+ font-size: 0.98rem;
+ overflow-wrap: anywhere;
+ word-break: break-word;
+ }
+
+ .price-highlight {
+ background: linear-gradient(135deg, #0f8480, #20a39e);
+ color: white;
+ padding: 16px 12px;
+ border-radius: 12px;
+ text-align: center;
+ margin: 16px 0;
+ box-shadow: 0 4px 15px rgba(15, 132, 128, 0.3);
+ }
+
+ .price-highlight h3 {
+ margin: 0 0 12px 0;
+ font-size: clamp(1.15rem, 4.5vw, 1.8rem);
+ }
+
+ /* mobile-first: 2 cols, then 4 on wider */
+ .price-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 10px;
+ margin-top: 8px;
+ }
+
+ .price-item {
+ background: rgba(255,255,255,0.2);
+ padding: 10px 8px;
+ border-radius: 8px;
+ text-align: center;
+ font-size: 0.92rem;
+ line-height: 1.2;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ align-items: center;
+ gap: 2px;
+ }
+
+ .price-item strong {
+ display: block;
+ font-size: 0.78rem;
+ letter-spacing: 0.02em;
+ text-transform: uppercase;
+ opacity: 0.95;
+ line-height: 1.15;
+ margin: 0;
+ }
+
+ .price-item .price-value {
+ display: block;
+ font-size: 1.05rem;
+ font-weight: 700;
+ line-height: 1.15;
+ margin: 0;
+ }
+
+ .price-item small {
+ display: block;
+ font-size: 0.75rem;
+ opacity: 0.9;
+ line-height: 1.1;
+ margin: 0;
+ }
+
+ .itinerary {
+ background: #fff;
+ border-radius: 12px;
+ overflow: hidden;
+ box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+ margin: 16px 0;
+ }
+
+ .itinerary-header {
+ background: #0f8480;
+ color: white;
+ padding: 12px 10px;
+ text-align: center;
+ }
+
+ .itinerary-header h3 {
+ margin: 0;
+ font-size: clamp(1.05rem, 4vw, 1.35rem);
+ }
+
+ .day-item {
+ padding: 14px 12px;
+ border-bottom: 1px solid #eee;
+ background: #f8f9fa;
+ text-align: center;
+ }
+
+ .day-item:last-child {
+ border-bottom: none;
+ }
+
+ .day-title {
+ color: #0f8480;
+ font-size: clamp(1.05rem, 4vw, 1.3rem);
+ font-weight: bold;
+ margin-bottom: 10px;
+ text-align: center;
+ }
+
+ /* mobile-first single column */
+ .services-grid {
+ display: grid;
+ grid-template-columns: 1fr;
+ gap: 12px;
+ margin: 16px 0;
+ }
+
+ ul {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ }
+
+ li {
+ background: white;
+ margin: 8px 0;
+ padding: 12px 12px 12px 14px;
+ border-radius: 8px;
+ border-left: 3px solid #0f8480;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+ font-size: 0.95rem;
+ line-height: 1.4;
+ overflow-wrap: anywhere;
+ }
+
+ li:before {
+ content: "";
+ color: #0f8480;
+ font-weight: bold;
+ margin-right: 8px;
+ }
+
+ .not-included li:before {
+ content: "";
+ color: #c0392b;
+ }
+
+ .what-to-bring {
+ background: #f8f9fa;
+ padding: 14px;
+ border-radius: 12px;
+ margin: 16px 0;
+ border-left: 5px solid #0f8480;
+ line-height: 1.4;
+ }
+
+ .what-to-bring h3 {
+ color: #0f8480;
+ }
+
+ .what-to-bring li:before {
+ content: "";
+ }
+
+ .payment-info {
+ background: #f8f9fa;
+ padding: 14px;
+ border-radius: 12px;
+ margin: 16px 0;
+ border-left: 5px solid #0f8480;
+ line-height: 1.45;
+ }
+
+ .contact-info {
+ background: #f0faf9;
+ padding: 14px;
+ border-radius: 12px;
+ margin: 16px 0 24px;
+ border-left: 5px solid #0f8480;
+ line-height: 1.5;
+ }
+
+ .contact-info a {
+ color: #0f8480;
+ word-break: break-all;
+ }
+
+ .disclaimer {
+ text-align: left;
+ font-style: italic;
+ color: #666;
+ margin: 12px 0 16px;
+ font-size: 0.9rem;
+ padding: 0 2px;
+ }
+
+ @media (min-width: 480px) {
+ body { padding: 16px; }
+ .day-item { padding: 16px 18px; }
+ }
+
+ @media (min-width: 640px) {
+ .price-grid {
+ grid-template-columns: repeat(4, 1fr);
+ }
+ .day-item,
+ .day-title {
+ text-align: center;
+ }
+ .disclaimer {
+ text-align: center;
+ }
+ }
+
+ @media (min-width: 768px) {
+ body { padding: 20px; }
+ .services-grid {
+ grid-template-columns: 1fr;
+ gap: 20px;
+ }
+ .content-section,
+ .what-to-bring,
+ .payment-info,
+ .contact-info {
+ padding: 18px 20px;
+ }
+ .price-highlight {
+ padding: 24px;
+ }
+ }
+
+ 
+        
+
+        /* ===== MOBILE-FIRST FULL PAGE (all cabalgatas) ===== */
+        *, *::before, *::after { box-sizing: border-box; }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            overflow-x: hidden;
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 15px;
-            line-height: 1.3;
-            color: #333;
-            background: #fff;
+            margin: 0 auto !important;
+            padding: 12px !important;
+            max-width: 920px !important;
+            width: 100% !important;
+            overflow-x: hidden !important;
+            font-size: 16px !important;
+            line-height: 1.45 !important;
+            word-wrap: break-word;
+            overflow-wrap: anywhere;
         }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        
-        .logo {
-            width: 120px;
+
+        img,
+        video,
+        canvas,
+        svg {
+            max-width: 100% !important;
             height: auto;
-            margin-bottom: 15px;
         }
-        
+
+        .logo {
+            width: min(100px, 28vw) !important;
+            height: auto !important;
+        }
+
         .title {
-            background: linear-gradient(135deg, #0f8480, #20a39e);
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 15px;
+            padding: 12px 10px !important;
+            border-radius: 12px !important;
         }
-        
-        .title h1 {
-            margin: 0;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+
+        .title h1,
+        h1 {
+            font-size: clamp(1.25rem, 5.8vw, 2.4rem) !important;
+            line-height: 1.15 !important;
+            word-break: break-word !important;
+            margin: 0 !important;
         }
-        
-        .title h2 {
-            margin: 5px 0 0 0;
-            font-size: 1.2em;
-            opacity: 0.9;
+
+        .title h2,
+        h2 {
+            font-size: clamp(0.9rem, 3.6vw, 1.25rem) !important;
+            line-height: 1.25 !important;
         }
-        
+
+        h3 {
+            font-size: clamp(1.05rem, 4.2vw, 1.4rem) !important;
+            line-height: 1.25 !important;
+        }
+
+        h4 {
+            font-size: clamp(0.95rem, 3.5vw, 1.15rem) !important;
+        }
+
+        p, li, td, th, span, small, strong {
+            overflow-wrap: anywhere;
+        }
+
+        .main-image,
+        .hero-section,
+        .hero-section img {
+            width: 100% !important;
+            max-width: 100% !important;
+            border-radius: 12px !important;
+        }
+
         .main-image {
-            width: 100%;
-            max-width: 600px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            margin: 20px auto;
-            display: block;
+            height: clamp(150px, 42vw, 250px) !important;
+            object-fit: cover !important;
+            margin: 12px auto !important;
+            display: block !important;
         }
-        
-        .content-section {
-            margin: 30px 0;
-            padding: 20px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            border-left: 5px solid #0f8480;
+
+        .hero-section {
+            height: clamp(180px, 48vw, 350px) !important;
+            margin: 12px 0 !important;
         }
-        
+
+        .content-section,
+        .what-to-bring,
+        .payment-info,
+        .contact-info,
+        .day-item,
+        .itinerary,
         .price-highlight {
-            background: linear-gradient(135deg, #0f8480, #20a39e);
-            color: white;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            margin: 25px 0;
-            box-shadow: 0 4px 15px rgba(15, 132, 128, 0.3);
+            max-width: 100% !important;
         }
-        
-        .price-highlight h3 {
-            margin: 0 0 15px 0;
-            font-size: 1.8em;
+
+        .content-section,
+        .what-to-bring,
+        .payment-info,
+        .contact-info {
+            padding: 14px !important;
+            margin: 14px 0 !important;
+            border-radius: 10px !important;
         }
-        
+
+        .price-highlight {
+            padding: 14px 10px !important;
+            margin: 14px 0 !important;
+        }
+
         .price-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 8px !important;
         }
-        
+
         .price-item {
-            background: rgba(255,255,255,0.2);
-            padding: 10px;
-            border-radius: 5px;
-            text-align: center;
+            min-width: 0 !important;
+            padding: 10px 6px !important;
         }
-        
-        .easter-special {
-            background: linear-gradient(135deg, #0f8480, #20a39e);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 25px 0;
-            text-align: center;
+
+        /* Force ALL multi-col layouts to single column on mobile */
+        .services-grid,
+        .services-container,
+        .dates-grid,
+        .info-grid,
+        .menu-grid,
+        .breakfast-grid,
+        .lunch-dinner-row,
+        .two-col,
+        .grid-2,
+        .tour-info-grid {
+            display: grid !important;
+            grid-template-columns: 1fr !important;
+            gap: 12px !important;
+            width: 100% !important;
         }
-        
-        .itinerary {
-            background: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin: 25px 0;
+
+        /* Catch common inline dual columns */
+        [style*="grid-template-columns: 1fr 1fr"],
+        [style*="grid-template-columns:1fr 1fr"],
+        [style*="grid-template-columns: 1fr 1fr 1fr"],
+        [style*="display: grid"][style*="1fr 1fr"] {
+            grid-template-columns: 1fr !important;
         }
-        
-        .itinerary-header {
-            background: #0f8480;
-            color: white;
-            padding: 15px;
-            text-align: center;
+
+        [style*="minmax(200px"],
+        [style*="minmax(250px"],
+        [style*="minmax(300px"],
+        [style*="minmax(400px"],
+        [style*="minmax(450px"] {
+            grid-template-columns: 1fr !important;
         }
-        
+
+        table {
+            width: 100% !important;
+            max-width: 100% !important;
+            display: block;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
         .day-item {
-            padding: 15px;
-            border-bottom: 1px solid #eee;
-            background: linear-gradient(135deg, #f8f9fa, #fff);
-            margin-bottom: 20px;
-            text-align: center;
+            padding: 14px 12px !important;
+            text-align: center !important;
         }
-        
-        .day-item:last-child {
-            border-bottom: none;
-        }
-        
+
         .day-title {
-            color: #0f8480;
-            font-size: 1.3em;
-            font-weight: bold;
-            margin-bottom: 8px;
+            font-size: clamp(1.05rem, 4vw, 1.3rem) !important;
+            text-align: center !important;
+            width: fit-content !important;
+            display: block !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
         }
-        
-        .includes-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin: 15px 0;
+
+        .itinerary-header {
+            padding: 12px 10px !important;
         }
-        
-        .include-item {
-            background: white;
-            padding: 12px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-left: 4px solid #0f8480;
-        }
-        
-        .include-item h4 {
-            color: #0f8480;
-            margin: 0 0 10px 0;
-        }
-        
-        .highlight {
-            background: #fff3cd;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #ffc107;
-            margin: 20px 0;
-        }
-        
+
         ul {
-            list-style: none;
-            padding: 0;
+            padding-left: 0 !important;
         }
-        
+
         li {
-            background: white;
-            margin: 8px 0;
-            padding: 12px 15px;
-            border-radius: 5px;
-            border-left: 3px solid #0f8480;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin: 8px 0 !important;
+            padding: 10px 12px !important;
         }
+
+        /* kill horizontal scroll from long unbroken strings */
+        a {
+            word-break: break-all;
+        }
+
+        @media (min-width: 480px) {
+            body { padding: 14px !important; }
+        }
+
+        @media (min-width: 640px) {
+            body { padding: 16px !important; }
+
+            .price-grid {
+                grid-template-columns: repeat(4, 1fr) !important;
+            }
+
+            .day-item,
+            .day-title {
+                text-align: center !important;
+            }
+        }
+
+        @media (min-width: 768px) {
+            body { padding: 20px !important; }
+
+            .services-grid,
+            .services-container {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 20px !important;
+            }
+
+            .breakfast-grid,
+            .lunch-dinner-row {
+                grid-template-columns: 1fr 1fr !important;
+            }
+
+            .content-section,
+            .what-to-bring,
+            .payment-info,
+            .contact-info {
+                padding: 18px 20px !important;
+            }
+
+            .price-highlight {
+                padding: 22px !important;
+            }
+
+            /* allow multi-col only from tablet up when intentionally set */
+            [style*="grid-template-columns: 1fr 1fr"],
+            [style*="grid-template-columns:1fr 1fr"] {
+                grid-template-columns: 1fr 1fr !important;
+            }
+        }
+
+        @media (min-width: 900px) {
+            [style*="minmax(200px"],
+            [style*="minmax(250px"] {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+            }
+        }
+
+    
         
-        li:before {
-            content: "✓";
-            color: #0f8480;
-            font-weight: bold;
-            margin-right: 10px;
-        }
         
-        .family-friendly {
-            background: linear-gradient(135deg, #0f8480, #20a39e);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 25px 0;
-            text-align: center;
+        /* day label chip: visible pill, width follows text, centered */
+        .day-title,
+        .day-item > .day-title,
+        .itinerary .day-title,
+        h3.day-title,
+        .day-section > h3,
+        .days-container .day-section > h3 {
+            display: inline-block !important;
+            width: fit-content !important;
+            max-width: calc(100% - 16px) !important;
+            margin: 8px auto 12px auto !important;
+            padding: 8px 16px !important;
+            text-align: center !important;
+            float: none !important;
+            background: #0f8480 !important;
+            color: #fff !important;
+            border-radius: 999px !important;
+            border: none !important;
+            box-shadow: 0 2px 8px rgba(15, 132, 128, 0.25) !important;
+            font-weight: 700 !important;
+            font-size: clamp(0.95rem, 3.6vw, 1.2rem) !important;
+            line-height: 1.2 !important;
+            white-space: normal !important;
+            word-break: break-word !important;
         }
-        
-        .payment-info {
-            background: #f8f9fa;
-            padding: 18px;
-            border-radius: 12px;
-            margin: 20px 0;
-            border-left: 5px solid #0f8480;
-            line-height: 1.4;
+
+        /* keep day body readable; title chip itself is centered via parent */
+        .day-item,
+        .day-section {
+            text-align: center !important;
         }
+
+        .day-item > p,
+        .day-section > p {
+            text-align: center !important;
+        }
+
     </style>
 </head>
 <body>
-    <div class="header">
-        <img src="/logoGr.png" alt="GR Turismo Aventura Logo" class="logo">
-        <div class="title">
-            <h1>Cavalgada de Semana Santa</h1>
-            <h2>Uma experiência especial na Cordilheira</h2>
-        </div>
-    </div>
+ <div class="header">
+ <img src="/logoGr.png" alt="GR Turismo Aventura Logo" class="logo">
+ <div class="title">
+ <h1>CABALGATA SEMANA SANTA</h1>
+ <h2>3 noites / 4 dias</h2>
+ </div>
+ </div>
 
-    <img src="/cabalgatasemanasanta.png" alt="Cavalgada Semana Santa" class="main-image">
+ <img src="/cabalgatasemanasanta.png" alt="Cabalgata Semana Santa" class="main-image">
 
-    <div class="price-highlight">
-        <h3>Preço Especial Semana Santa</h3>
-        <div class="price-grid">
-            <div class="price-item">
-                <strong>Preço</strong><br>
-                CONSULTAR<br>
-                <small>por pessoa</small>
-            </div>
-            <div class="price-item">
-                <strong>Duração</strong><br>
-                4 dias<br>
-                <small>3 noites</small>
-            </div>
-            <div class="price-item">
-                <strong>Dificuldade</strong><br>
-                Iniciante<br>
-            </div>
-            <div class="price-item">
-                <strong>DATA</strong><br>
-                25, 26, 27 e 28<br>
-                <small>MARCO 2027</small>
-            </div>
-        </div>
-    </div>
+ <div class="price-highlight">
+ <h3>Preço Especial Semana Santa</h3>
+ <div class="price-grid">
+ <div class="price-item">
+ <strong>Preço</strong>
+ <span class="price-value">$1.440.000</span>
+ <small>por pessoa</small>
+ </div>
+ <div class="price-item">
+ <strong>Duração</strong>
+ <span class="price-value">4 dias</span>
+ <small>3 noites</small>
+ </div>
+ <div class="price-item">
+ <strong>Dificuldade</strong>
+ <span class="price-value">Iniciante</span>
+ </div>
+ <div class="price-item">
+ <strong>DATA</strong>
+ <span class="price-value">25, 26, 27 e 28</span>
+ <small>MARÇO 2027</small>
+ </div>
+ </div>
+ </div>
 
-    <div class="itinerary">
-        <div class="itinerary-header">
-            <h3 style="text-align: center;">📅 Programa de Cavalgada</h3>
-        </div>
-        
-        <div class="day-item" style="text-align: center;">
-            <div class="day-title" style="text-align: center;">Dia 1 - Quinta-feira Santa</div>
-            <p>Recebemos você em El Montañés das 11h às 13h. Conversa e apresentação dos guias. Preparação das alforjes. Almoço.</p>
-            <p><strong>15 horas:</strong> Partida da cavalgada desde Portezuelo Ancho. Cavalgamos até Valle Hermoso (3 hs / 3 horas e meia de cavalgada).</p>
-            <p>Depois da tarde, preparamos as "camas" com lonas, parte da sela, saco de dormir e cobertores. Ao mesmo tempo, o assistente do guia prepara o fogo para cozinhar. A noite será sob as estrelas, fogueira e violão, e o silêncio dos Andes.</p>
-        </div>
-        
-        <div class="day-item" style="text-align: center;">
-            <div class="day-title" style="text-align: center;">Dia 2 - Sexta-feira Santa</div>
-            <p><strong>8 horas:</strong> Café da manhã, selamos os cavalos. Percorremos o grande vale de Las Vegas Negras.</p>
-            <p>O almoço é uma refeição fria.</p>
-            <p>À tarde chegaremos a 3000 metros acima do nível do mar. "Mirante dos Três Vales" um lugar paradisíaco. Poderemos observar o Vale do Río Cobre, Vale da Matansilla e Valle Hermoso.</p>
-            <p>Retornamos ao acampamento onde nos esperam com deliciosos bolos fritos para acompanhar com um bom mate. Passaremos a segunda noite no campo. Jantar.</p>
-        </div>
+ <div class="itinerary">
+ <div class="itinerary-header">
+ <h3 style="margin: 0;">Programa da Cavalgada</h3>
+ </div>
 
-        <div class="day-item" style="text-align: center;">
-            <div class="day-title" style="text-align: center;">Dia 3 - Sábado</div>
-            <p><strong>8 horas:</strong> Café da manhã. Continuaremos desfrutando do belo vale que nos rodeia, cruzaremos o Río Tordillo e passaremos perto da Lagoa Valle Hermoso.</p>
-            <p>Almoço.</p>
-            <p>Partimos para o Río Cobre onde poderemos desfrutar de um banho termal no meio das montanhas.</p>
-            <p>Voltamos ao acampamento base. Tarde. Jantar.</p>
-        </div>
+ <div class="day-item">
+ <div class="day-title">Dia 1 - Quinta-feira Santa</div>
+ <p>Recebemos vocês no El Montañés das 11h às 13h. Conversa e apresentação dos guias. Preparo das alforjas. Almoço.</p>
+ <p><strong>15 horas:</strong> Partida da cavalgada desde Portezuelo Ancho. Cavalgamos até Valle Hermoso (3 h / 3 h e meia de cavalgada).</p>
+ <p>Depois da meia tarde, preparamos as “camas” com lonas, parte da montaria, saco de dormir e cobertores. Ao mesmo tempo o auxiliar de guia prepara o fogo para cozinhar. A noite será sob as estrelas, fogueira e violão, e o silêncio dos Andes.</p>
+ </div>
 
-        <div class="day-item" style="text-align: center;">
-            <div class="day-title" style="text-align: center;">Dia 4 - Domingo</div>
-            <p><strong>8 horas:</strong> Café da manhã. Última selada dos cavalos e mulas.</p>
-            <p>Já retornando, nos dirigimos com destino final ao Portezuelo Ancho, onde nos esperam um delicioso almoço e os veículos para nos levar de volta ao Refugio Pehuenche em Los Molles.</p>
-            <p>Banho reparador. Tarde. Jantar e despedida.</p>
-        </div>
-    </div>
+ <div class="day-item">
+ <div class="day-title">Dia 2 - Sexta-feira Santa</div>
+ <p><strong>8 horas:</strong> Café da manhã, ensilhamos os cavalos. Percorremos o grande vale de Las Vegas Negras.</p>
+ <p>O almoço é uma vianda fria.</p>
+ <p>À tarde chegaremos aos 3000 m snm. “Mirador de los Tres Valles”, lugar paradisíaco. Poderemos observar o Vale do Río Cobre, Vale da Matansilla e Valle Hermoso.</p>
+ <p>Voltamos ao acampamento onde nos esperam deliciosas tortas fritas para acompanhar com um bom mate. Passaremos a segunda noite de campo. Jantar.</p>
+ </div>
 
-    <p style="text-align: center; font-style: italic; color: #666; margin: 20px 0;">Os tempos de cavalgada variam de acordo com as decisões dos guias. O programa pode variar conforme o clima e as condições dos rios.</p>
+ <div class="day-item">
+ <div class="day-title">Dia 3 - Sábado</div>
+ <p><strong>8 horas:</strong> Café da manhã. Continuaremos desfrutando do belo vale que nos cerca, cruzaremos o Río Tordillo e passaremos perto da Laguna Valle Hermoso.</p>
+ <p>Almoço.</p>
+ <p>Partimos para o Río Cobre, onde poderemos desfrutar de um banho termal no meio da cordilheira.</p>
+ <p>Voltamos ao acampamento base. Meia tarde. Jantar.</p>
+ </div>
 
-    <div class="services-grid">
-        <div class="content-section" style="padding: 15px 15px 5px 15px;">
-            <div class="services-included">
-                <h3>✅ SERVIÇOS INCLUÍDOS</h3>
-                <ul>
-                    <li>Travessia a cavalo com pensão completa</li>
-                    <li>Refeições e bebidas durante a cavalgada e atividades</li>
-                    <li>Equipamento completo: cavalos, selas e mulas cargueiras</li>
-                    <li>Equipamento completo para atividades de aventura</li>
-                    <li>Guias especializados em cada atividade</li>
-                    <li>Comunicação por satélite em emergências</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="content-section" style="color: black; line-height: 1.5; text-align: left;">
-        <h3>COMO CHEGAR ÀS INSTALAÇÕES?</h3>
-        <p>Os passageiros podem chegar em seus próprios veículos. No momento da cavalgada, o veículo fica seguro no local do Club Andino Pehuenche.</p>
+ <div class="day-item">
+ <div class="day-title">Dia 4 - Domingo</div>
+ <p>Último meio dia de cavalgada. Despedimo-nos dos nossos companheiros de trilha.</p>
+ <p>Retorno ao Montañés em transfer desde o Mirador de Valle Hermoso.</p>
+ <p>Almoço, com a possibilidade de banho reparador.</p>
+ <p><strong>Fim do serviço: 15 h.</strong></p>
+ </div>
+ </div>
 
-        <h4>Quer viajar de Ônibus ou Avião?</h4>
-        <p>Pode sim! Sugerimos viajar um dia antes para Mendoza, pernoitar, e no dia seguinte pegar o transfer da empresa até a região de Los Molles. Vagas limitadas, consultar disponibilidade, horários e valores.</p>
-        <p>Consultar por transfer desde San Rafael (vagas limitadas)</p>
-    </div>
-    </div>
+ <p class="disclaimer">Os tempos de cavalgada variam conforme as decisões dos guias. O programa pode mudar conforme o clima e as condições dos rios.</p>
 
+ <div class="services-grid">
+ <div class="content-section" style="padding: 15px;">
+ <h3>SERVIÇOS INCLUÍDOS</h3>
+ <ul>
+ <li>Travessia a cavalo com pensão completa</li>
+ <li>Refeições e bebidas durante a cavalgada</li>
+ <li>Equipamento completo para a cavalgada: cavalos, selas e mulas de carga</li>
+ <li>Equipamento completo para as atividades de aventura</li>
+ <li>Guias especializados em cada uma das atividades</li>
+ <li>Comunicação satelital em caso de urgências</li>
+ </ul>
+ </div>
 
-        <div class="payment-info">
-        <h3>💳 FORMAS DE PAGAMENTO</h3>
-        <div style="margin: 15px 0;">
-            <h4>Como reservo meu lugar para a cavalgada?</h4>
-            <p>Você pode fazer da seguinte forma:</p>
-            <p>Cartão de crédito: 3, 6 e 12 parcelas com juros</p>
-            <p>Ou com um sinal de 10% por transferência bancária ou depósito bancário.</p>
-            <p>Se você não é residente argentino, consulte-nos sobre a carteira virtual que pode usar para pagar o sinal.</p>
-        </div>
-        
-        <p><strong>⚠️ O sinal não é reembolsável caso o passageiro não possa viajar</strong>, mas você pode trocar a data/ano ou transferi-lo para outro passageiro. Como nossa moeda se desvaloriza constantemente, os 10% ficam garantidos sobre o preço atualizado.</p>
-        
-        <div style="margin: 15px 0;">
-            <h4>Dados necessários para a reserva:</h4>
-            <ul style="list-style: disc; margin-left: 20px;">
-                <p>Nome completo</p>
-                <p>Idade e documento</p>
-                <p>Data de nascimento</p>
-                <p>Telefone</p>
-                <p>E-mail</p>
-                <p>Regime alimentar: normal, celíaco, vegetariano, vegano, etc.</p>
-                <p>Alergias</p>
-                <p>Peso (kg)</p>
-            </ul>
-        </div>
-    </div>
+ <div class="content-section not-included" style="padding: 15px;">
+ <h3>SERVIÇOS NÃO INCLUÍDOS</h3>
+ <ul>
+ <li>Aéreo e/ou ônibus de ida ou volta até o ponto de encontro em Los Molles</li>
+ <li>Transfers do aeroporto de San Rafael ou Mendoza a Los Molles, ou vice-versa</li>
+ <li>Bebidas ou extras solicitados no hostel e/ou restaurante do mesmo</li>
+ </ul>
+ </div>
+ </div>
 
+ <div class="what-to-bring">
+ <h3>QUE ELEMENTOS DEVO LEVAR?</h3>
+ <ul>
+ <li>Saco de dormir apto para -10°</li>
+ <li>Chapéu com barbicacho (tiras para prender ao pescoço e que não voe com o vento)</li>
+ <li>Capa de chuva</li>
+ <li>Duas mudas de roupa. Recomendamos bombachas de campo ou calças folgadas. É melhor viajar com camisas e não com camisetas de gola redonda: as primeiras protegem mais do sol. Convém levar vários casacos finos em vez de um só muito grosso. Casacos de polar são muito adequados, ideais para qualquer estação</li>
+ <li>Uma camiseta quente, meias-calças ou cuecas longas</li>
+ <li>Jaqueta quente e/ou poncho</li>
+ <li>Gorro de lã</li>
+ <li>Lenço de pescoço, cachecol e luvas de jardinagem</li>
+ <li>Traje de banho e short</li>
+ <li>Tênis e alpargatas. Para cavalgar não convêm calçados muito largos, como borzeguins: podem ficar presos no estribo. Quem está acostumado pode usar botas de montar. Os tênis devem ser impermeáveis</li>
+ <li>Medicamentos pessoais</li>
+ <li>Repelente de insetos</li>
+ <li>Nenhuma vacina é obrigatória na zona. Ainda assim, como para qualquer atividade ao ar livre, sugerimos a vacina antitetânica</li>
+ <li>Itens de higiene pessoal (também podem levar lenços umedecidos). Duas toalhas</li>
+ <li>Protetor solar e de lábios</li>
+ <li>Óculos de sol com suporte (opcional)</li>
+ <li>Lanterna de cabeça</li>
+ <li>Binóculos (opcional)</li>
+ <li>Caneca, prato e talheres</li>
+ <li>Câmera de fotos</li>
+ </ul>
+ </div>
+
+ <div class="content-section" style="color: black; line-height: 1.5; text-align: left;">
+ <h3>COMO CHEGAR ÀS INSTALAÇÕES?</h3>
+ <p>Os passageiros podem chegar em seus próprios veículos ao Montañés, em Los Molles, Malargüe. No momento da cavalgada o veículo fica seguro no predio do Club Andino Pehuenche.</p>
+
+ <h4>Quer viajar de ônibus ou avião?</h4>
+ <p>Sugerimos chegar a San Rafael. No dia <strong>25/03</strong> pela manhã (<strong>~9:30 h</strong>) um veículo da nossa empresa estará disponível para ir a Los Molles. Lá estaremos esperando para o check-in e começar a aventura.</p>
+ <p>Terminado o serviço do dia 4, um veículo estará disponível para San Rafael às <strong>15 h</strong>.</p>
+ <p><strong>Valor dos traslados ida e volta: $96.000</strong></p>
+ <p>Ponto de encontro a confirmar / vagas limitadas.</p>
+ </div>
+
+ <div class="payment-info">
+ <h3>COMO RESERVO MEU LUGAR?</h3>
+ <p>Com um sinal de <strong>10%</strong> por transferência ou depósito bancário você reserva e congela a cavalgada.</p>
+ <p>Se não for residente argentino, consulte-nos a carteira virtual que pode usar para o sinal.</p>
+ <p><strong>O sinal não é reembolsável caso o passageiro não possa viajar</strong>, mas pode optar por mudar de data/ano ou transferi-lo a outro passageiro. Considerando que nossa moeda se desvaloriza constantemente, têm garantido o 10% do preço atualizado.</p>
+ </div>
+
+ <div class="contact-info">
+ <h3 style="color: #0f8480; margin-top: 0;">Contato</h3>
+ <p><strong>Web:</strong> www.grturismoaventura.com.ar</p>
+ <p><strong>WhatsApp:</strong> 3834214287 / 2604108134</p>
+ <p><strong>E-mail:</strong> grturismoaventura@gmail.com</p>
+ <p><strong>Localização:</strong> El Montañés — Los Molles, Malargüe, Mendoza</p>
+ </div>
 
 </body>
-
 </html>

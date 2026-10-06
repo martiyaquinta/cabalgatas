@@ -120,11 +120,14 @@
 }
 
 .features li::before {
-  content: '✓';
+  content: '';
   position: absolute;
   left: 0;
-  color: #27ae60;
-  font-weight: bold;
+  top: 0.45em;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #0f8480;
 }
 
 .contactInfo {
