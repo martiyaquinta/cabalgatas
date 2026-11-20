@@ -674,7 +674,14 @@
             body { padding: 16px !important; }
 
             .price-grid {
-                grid-template-columns: repeat(4, 1fr) !important;
+                display: grid !important;
+                grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+                gap: 12px !important;
+                max-width: 720px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                justify-content: center !important;
+                width: 100% !important;
             }
 
             .day-item,
