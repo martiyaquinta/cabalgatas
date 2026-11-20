@@ -16,7 +16,7 @@ export default function HeroSection() {
         style={{
           backgroundImage: 'url(/fondoinicio.png)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center 70%',
           backgroundRepeat: 'no-repeat'
         }}
       >

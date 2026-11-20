@@ -106,7 +106,15 @@ function CabalgataCard({ cabalgata }: { cabalgata: CabalgataProps }) {
         <img
           src={cabalgata.image}
           alt={t(cabalgata.titleKey)}
-          style={cabalgata.id === 'cabalgata-expertos' ? { objectPosition: 'center 85%' } : undefined}
+          style={
+            cabalgata.id === 'cabalgata-expertos'
+              ? { objectPosition: 'center 85%' }
+              : cabalgata.id === 'Cruce de los Andes' || cabalgata.id === 'cabalgata-los-molles'
+                ? { objectPosition: 'center 85%' }
+                : cabalgata.id === 'cabalgata-avion-uruguayos'
+                  ? { objectPosition: 'center 70%' }
+                  : undefined
+          }
         />
         {cabalgata.id !== 'cabalgata-3-valles' && (
           <div className={styles.difficultyBadge}>
